@@ -1,0 +1,62 @@
+<ion-view>
+<ion-content>
+<ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="doRefresh()">
+  </ion-refresher>
+<h2 class="pageheader title">Registration</h2>
+<div class="container-fluid">
+<form ng-submit="doBooking(x)" >
+<div>
+  <label class="item item-input">
+    <i class="fa fa-user">&nbsp;&nbsp;</i>
+    <span class="input-label">Name</span>
+    <input type="text" placeholder="Enter Name" ng-model="x.name" >
+  </label>
+
+  <label class="item item-input">
+    <i class="fa fa-smile-o" aria-hidden="true">&nbsp;&nbsp;</i>
+    <span class="input-label">Occassion</span>
+    <input type="text" placeholder="Enter Occassion" ng-model="x.occassion">
+  </label>
+</div>
+
+  <div class="item-divider">
+    
+    <label class="item item-input">
+    <i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;</i>
+     <span class="input-label">From Date </span>
+     <input type="text" placeholder="Enter From Date" ng-click="openDatePicker()" ng-model="x.fdate">  
+   </label>
+
+   <label class="item item-input" ng-show="x.fdate">
+    <i class="fa fa-calendar" aria-hidden="true">&nbsp;&nbsp;</i>
+    <span class="input-label">To Date</span>
+    <input type="text" placeholder="Enter To Date"  ng-click="openDatePicker1()" ng-model="x.tdate">
+  </label>
+</div>
+
+<div class="item-divider">
+    <label class="item item-input">
+      <i class="fa fa-clock-o" aria-hidden="true">&nbsp;&nbsp;</i>
+     <span class="input-label">From Time </span>
+     <input type="text" placeholder="Enter From Time" ng-click="openTimePicker()" ng-model="x.ftime">  
+   </label>
+
+   <label class="item item-input" ng-show="x.ftime">
+    <i class="fa fa-clock-o" aria-hidden="true">&nbsp;&nbsp;</i>
+    <span class="input-label">Time</span>
+    <input type="text" placeholder="Enter To Time" ng-click="openTimePicker1()" ng-model="x.ttime">
+  </label>
+</div>
+
+<div class="col col-50 col-offset-25">
+<button class="button button-block button-dark" type="submit">
+  Book Now
+</button>
+</div>
+</form>
+</div>
+
+</ion-content>
+</ion-view>

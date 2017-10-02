@@ -1,0 +1,13 @@
+
+
+<ion-header-bar class="bar bar-positive">
+<h2>lazy load</h2>
+</ion-header-bar>
+
+<ion-content lazy-scroll>
+<div ng-repeat="item in items">
+<div >
+<img image-lazy-src="{{ item.image }}" image-lazy-loader="android" image-lazy-distance-from-bottom-to-load="100">
+</div>
+</div>
+ </ion-content>

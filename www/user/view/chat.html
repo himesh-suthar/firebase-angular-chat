@@ -1,0 +1,11 @@
+<ion-view title="Chat" hide-back-button="true">
+      <button class="button button-icon ion-power" ng-click="logout()"></button>
+      <button class="button button-icon ion-ios-chatboxes" ng-click="addMessage()"></button>
+    <ion-content padding="true" class="has-header">
+        <ion-list>
+            <ion-item ng-repeat="message in messages">
+              {{message.message}}
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

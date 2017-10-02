@@ -1,0 +1,11 @@
+/* Empty. Add your own CSS if you like */
+.myfooter{
+	left :0 ;
+	right :0;
+	bottom: 0 ;
+	position: fixed;
+}
+#one{
+margin-bottom: 35px;
+
+}
